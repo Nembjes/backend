@@ -1,6 +1,6 @@
 import { Sequelize, Op } from 'sequelize';
 import Products from '../models/products.js';
-import RateprodCustomer from '../models/rateprodcustomer.js';
+import RateprodCustomer from '../models/rateprodСustomer.js';
 import Images from '../models/images.js';
 import Orderdetails from '../models/orderdetails.js';
 import Rate from '../models/rate.js';
