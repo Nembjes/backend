@@ -28,7 +28,7 @@ try {
 }
 
 // Настройка CORS для доступа с вашего домена
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+app.use(cors({ credentials: true, origin: 'https://frontendik-a2c5b201a2be.herokuapp.com' }));
 
 app.use(cookieParser());
 app.use(express.json());
