@@ -27,7 +27,9 @@ try {
    console.error('Connection error:', error);
 }
 
+// Настройка CORS для доступа с вашего домена
 app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+
 app.use(cookieParser());
 app.use(express.json());
 
@@ -45,10 +47,11 @@ app.use('/rate', rateRoute);
 app.use('/city', cityRoute);
 app.use('/image', imageRoute);
 
+// Настройка порта и хоста для прослушивания
+const PORT = process.env.PORT || 5000;
+const HOST = '0.0.0.0';
 
-const PORT = 5000;
-
-app.listen(PORT, '127.0.0.1', (error) => {
+app.listen(PORT, HOST, (error) => {
    error
       ? console.log(error)
       : console.log(`Server OK. listening port ${PORT}`);
