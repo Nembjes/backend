@@ -9,7 +9,7 @@ export const getAllProducts = async (req, res) => {
    try {
       const products = await Products.findAll({
          include: ['brand', 'category'],
-         order: [['id', 'DESC']],
+         order: [['id', 'ASC']],
       });
       res.json(products);
    } catch (error) {
